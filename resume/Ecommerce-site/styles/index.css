@@ -1,0 +1,360 @@
+body {
+	background-color: rgba(211, 211, 211, 0.2);
+}
+header {
+	font-size: 14px;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+#top ul {
+	height: 28px;
+	width: 100%;
+	position: relative;
+}
+#top ul li {
+	float: right;
+	margin: 4px 15px;
+	display: inline-block;
+}
+#top ul li:first-child {
+	margin-right: 130px;
+}
+.toplink {
+	color: #000;
+}
+.toplink:hover {
+	color: red;
+}
+#title {
+	background-color: #fff;
+	height: 190px;
+	width: 100%;
+	position: absolute;
+}
+.logo {
+	height: 125px;
+	width: 200px;
+	float: left;
+	margin: 20px;
+}
+.qr {
+	height: 80px;
+	width: 80px;
+	top: 50px;
+	float: left;
+	margin-left: 980px;
+	position: absolute;
+}
+.sth {
+	background-color: red;
+	color: #fff;
+	width: 50px;
+	height: 26px;
+	border:none;
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.shop {
+	background-color: #fff;
+	color: red;
+}
+#search {
+	width: 800px;
+	top: 50px;
+	margin: 0 350px;
+	position: relative;
+}
+#search-form input {
+	height: 38px;
+	width: 540px;
+	padding: 0 20px;
+	border: 3px solid red;
+	vertical-align: middle;
+}
+#search-form button {
+	background-color: red;
+	color: #fff;
+	height: 44px;
+	width: 160px;
+	font-size: 21px;
+	border: 3px solid red;
+	cursor: pointer;
+	vertical-align: middle;
+}
+#search-form button:active {
+	font-size: 20px;
+}
+#fine a {
+	color: #888;
+	font-size: 12px;
+	margin: 2px 5px;
+	display: inline-block;
+}
+#fine a:hover {
+	color: red;
+	text-decoration: none;
+}
+#fine a span {
+	color: red;
+}
+#fine a:last-child {
+	margin-left: 360px;
+}
+#context {
+	width: 980px;
+	top: 156px;
+	margin: 2px auto;
+	position: relative;
+	clear: both;
+}
+#left {
+	background-color: red;
+	color: #fff;
+	width: 180px;
+	padding: 3px;
+	float: left;
+}
+.nav {
+	color: #fff;
+	font-size: 15px;
+	margin: 0 4px;
+	line-height: 30px;
+}
+#left ul li {
+	list-style: none;
+}
+#left ul li a:hover {
+	text-decoration: underline;
+}
+#left ul li a:first-child {
+	margin-left: 10px;
+}
+.more {
+	font-size: 14px;
+	margin-left: 20px;
+}
+.detail {
+	background-color: #fff;
+	width: 400px;
+	top: 0;
+	left: 185px;
+	padding: 5px;
+	position: absolute;
+	display: none;
+	border: 2px solid red;
+	z-index: 99;
+	vertical-align: baseline;
+}
+.detail h4 {
+	display: inline-block;
+}
+.detail hr {
+	width: 370px;
+	text-align: center;
+	margin: 0 auto;
+}
+.detail ul li:first-child {
+	color: #000;
+	margin-left: 15px;
+	line-height: 30px;
+}
+.detail ul li {
+	line-height: 50px;
+	display: inline-block;
+}
+.detail a {
+	color: #aaa;
+	font-size: 13px;
+}
+.detail a:hover {
+	color: red;
+	text-decoration: underline;
+}
+.detail span {
+	color: red;
+}
+#main {
+	width: 750px;
+	float: left;
+}
+#nav-module {
+	height: 32px;
+}
+#nav-module ul li {
+	margin: 3px 0 3px 10px;
+	display: inline-block;
+	list-style: none;
+	float: left;
+	position: relative;
+	cursor: pointer;
+}
+#nav-module a {
+	text-align: center;
+	padding: 3px 5px 1px 5px;
+	font-weight: 600;
+}
+.first {
+	color: red;
+}
+.hd {
+	color: #000;
+}
+#nav-module ul li a:hover {
+	padding: 3px 5px 1px 5px;
+	background-color: red;
+	color: #fff;
+	border-radius: 15px;
+	text-decoration: none;
+}
+#nav-module li {
+	color: #ccc;
+}
+#ad {
+	height: 298px;
+	width: 550px;
+	float: left;
+	position: relative;
+	margin: 10px 5px 10px 10px;
+}
+#ad a img {
+	height: 250px;
+	width: 550px;
+	display: block;
+	position: absolute;
+}
+#stu {
+	top: 250px;
+	position: relative;
+}
+#stu a {
+	background-color: #ccc;
+	color: #fff;
+	width: 102px;
+	padding: 5px 3px 9px 3px;
+	margin: 1px;
+	float: left;
+	display: inline-block;
+}
+#stu a:hover {
+	text-decoration: none;
+}
+#stu a.selected {
+	background-color: red;
+}
+#stu span {
+    height: 16px;
+    display: block;
+    text-align: center;
+}
+#ad-top {
+	float: right;
+}
+#ad-top img {
+	height: 180px;
+	width: 180px;
+	margin: 10px 0 10px 5px;
+}
+#hot {
+	width: 180px;
+	float: right;
+	position: relative;
+	border: 1px solid #aaa;
+}
+#hot ul {
+	margin: 5px;
+	list-style: none;
+}
+#hot ul li a {
+	color: #000;
+	font-size: 13px;
+}
+#hot ul li a:hover {
+	text-decoration: underline;
+}
+#hot ul li a span {
+	color: red;
+}
+#section {
+	height: 200px;
+	width: 700px;
+	float: left;
+	margin: 10px;
+	position: relative;
+}
+#til {
+	height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+#til h4 {
+	float: left;
+	line-height: 20px;
+	position: relative;
+}
+#til ul {
+	float: right;
+	margin: 8px 0 0 0;
+	list-style: none;
+	position: relative;
+}
+#til ul li {
+	background-color: #ccc;
+	width: 38px;
+	text-align: center;
+	float: left;
+	margin: 0 0 0 7px;
+	display: inline-block;
+	cursor: pointer;
+}
+#til ul li:hover {
+	background-color: red;
+	color: #fff;
+}
+#til ul li.selected {
+	background-color: red;
+	color: #fff;
+}
+#con {
+	height: 200px;
+	width: 700px;
+	margin-bottom: 100px;
+	position: relative;
+	overflow: hidden;
+}
+#con ul li img {
+	height: 163px;
+	width: 163px;
+}
+#con ul {
+	width: 3000px;
+	margin: 10px 0 0 10px;
+	position: absolute;
+	list-style: none;
+}
+#con ul li {
+	float: left;
+	display: block;
+	margin-right: 12px;
+	position: relative;
+}
+.gray{
+	width:163px;
+	height:163px;
+	background-color: rgba(211, 211, 211, 0.4);
+	position:absolute;
+	top:0;
+	display:block;
+	cursor: pointer;
+}
+#con ul li span {
+	background-color: #ccc;
+	text-align: center;
+	line-height: 25px;
+	display: block;
+}
+#con ul li span a {
+	color: #fff;
+	font-size: 14px;
+}

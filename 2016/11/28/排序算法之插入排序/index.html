@@ -3,20 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Vue关于data数据的深度响应原理 | Lemon&#39;s Blog</title>
+    <title>排序算法之插入排序 | Lemon&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="前些日子在写Vue的时候遇到了一个问题，虽然最后修改好了。但是浅尝辄止不是我的性格。所以在工作之余，自己找寻了一下问题的原因，顺便研究了一下Vue的深度响应原理。">
+    <meta name="description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue关于data数据的深度响应原理">
-<meta property="og:url" content="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/index.html">
+<meta property="og:title" content="排序算法之插入排序">
+<meta property="og:url" content="http://lemon23.me/2016/11/28/排序算法之插入排序/index.html">
 <meta property="og:site_name" content="Lemon's Blog">
-<meta property="og:description" content="前些日子在写Vue的时候遇到了一个问题，虽然最后修改好了。但是浅尝辄止不是我的性格。所以在工作之余，自己找寻了一下问题的原因，顺便研究了一下Vue的深度响应原理。">
-<meta property="og:image" content="http://lemon23.me/images/Vue关于data数据的深度响应原理/img1.png">
-<meta property="og:updated_time" content="2016-10-26T07:41:58.000Z">
+<meta property="og:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/code-example.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/example1.jpeg">
+<meta property="og:updated_time" content="2016-11-29T03:59:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue关于data数据的深度响应原理">
-<meta name="twitter:description" content="前些日子在写Vue的时候遇到了一个问题，虽然最后修改好了。但是浅尝辄止不是我的性格。所以在工作之余，自己找寻了一下问题的原因，顺便研究了一下Vue的深度响应原理。">
-<meta name="twitter:image" content="http://lemon23.me/images/Vue关于data数据的深度响应原理/img1.png">
+<meta name="twitter:title" content="排序算法之插入排序">
+<meta name="twitter:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
+<meta name="twitter:image" content="http://lemon23.me/images/排序算法之插入排序/code-example.png">
     
 
     
@@ -192,16 +193,8 @@
 
 
             
-            <section id="main"><article id="post-Vue关于data数据的深度响应原理" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-排序算法之插入排序" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            
-	
-		<img src="/images/Vue关于data数据的深度响应原理/img1.png" class="article-banner" />
-	
-
-
-
         
 
         
@@ -209,7 +202,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Vue关于data数据的深度响应原理
+            排序算法之插入排序
         </h1>
     
 
@@ -218,8 +211,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/10/26/Vue关于data数据的深度响应原理/">
-            <time datetime="2016-10-26T03:48:25.000Z" itemprop="datePublished">2016-10-26</time>
+        <a href="/2016/11/28/排序算法之插入排序/">
+            <time datetime="2016-11-28T07:03:11.000Z" itemprop="datePublished">2016-11-28</time>
         </a>
     </div>
 
@@ -227,13 +220,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术/">技术</a>
+        <a class="article-category-link" href="/categories/技术/">技术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/算法/">算法</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Vue/">Vue</a>
+        <a class="tag-link" href="/tags/初级算法/">初级算法</a>, <a class="tag-link" href="/tags/排序/">排序</a>
     </div>
 
                     </div>
@@ -249,7 +242,7 @@
                     </span>
                     <span class="head-plus">
                         <i class="fa fa-comments"></i>
-                        <span class="ds-thread-count" data-thread-key="2016/10/26/Vue关于data数据的深度响应原理/">
+                        <span class="ds-thread-count" data-thread-key="2016/11/28/排序算法之插入排序/">
                             <i class="fa fa-spinner fa-spin"></i>
                         </span>条评论
                     </span>
@@ -267,7 +260,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#发现问题并产生疑问"><span class="toc-number">1.</span> <span class="toc-text">发现问题并产生疑问</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述"><span class="toc-number">1.1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码分析"><span class="toc-number">1.2.</span> <span class="toc-text">代码分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列出疑问"><span class="toc-number">1.3.</span> <span class="toc-text">列出疑问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#探索既是发现"><span class="toc-number">2.</span> <span class="toc-text">探索既是发现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#针对问题寻找答案"><span class="toc-number">2.1.</span> <span class="toc-text">针对问题寻找答案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更改问题代码"><span class="toc-number">2.2.</span> <span class="toc-text">更改问题代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方法不唯一"><span class="toc-number">2.3.</span> <span class="toc-text">解决方法不唯一</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插入排序"><span class="toc-number">1.</span> <span class="toc-text">插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.1.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.3.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
                 </div>
             <script>
                 $('#toc').click(function() {
@@ -275,39 +268,32 @@
                 });
             </script>
             
-            <p>前些日子在写Vue的时候遇到了一个问题，虽然最后修改好了。但是浅尝辄止不是我的性格。所以在工作之余，自己找寻了一下问题的原因，顺便研究了一下Vue的深度响应原理。</p>
+            <p>插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)</p>
 <a id="more"></a>
-<h1 id="发现问题并产生疑问"><a href="#发现问题并产生疑问" class="headerlink" title="发现问题并产生疑问"></a>发现问题并产生疑问</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p><strong>任务需求</strong>：创建一个用户填写信息的表单页面，用户需要输入身份信息、手机号和验证码等。</p>
-<p><strong>出现问题</strong>：页面已经写好了，可是在表单中使用<code>v-model</code>时出现了问题。应该响应用户输入的表单却不随着输入更新数据，导致提交时的表单信息没有更新。</p>
-<h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>在每个表单中都引用相应的<code>v-model</code>值，并在用户点击提交后，存放在<code>cookie</code>里，用户需要重复输入的时候读取<code>cookie</code>中已有的值，可以避免用户重复输入信息。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">placeholder</span>=<span class="string">"请输入您的手机号"</span> <span class="attr">v-model</span>=<span class="string">"order.mobile"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">placeholder</span>=<span class="string">"请输入验证码"</span> <span class="attr">v-model</span>=<span class="string">"order.verify_code"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"请输入您的姓名"</span> <span class="attr">v-model</span>=<span class="string">"order.real_name"</span> /&gt;</span></div><div class="line">        .</div><div class="line">        .</div><div class="line">        .</div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"请输入详细地址"</span> <span class="attr">v-model</span>=<span class="string">"order.add_detail"</span>/&gt;</span></div></pre></td></tr></table></figure><br>表单代码如上，表单信息存在名为<code>order</code>的数据中，用户点击提交按钮后，把<code>order</code>存储在<code>cookie</code>中。现在展示vue的代码部分：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"> data()&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">order</span>:&#123;&#125;</div><div class="line">    &#125;</div><div class="line"> &#125;,</div><div class="line"> <span class="attr">methods</span>: &#123;</div><div class="line">    reload() &#123;</div><div class="line">        <span class="keyword">this</span>.order = getCookie(<span class="string">'order'</span>)</div><div class="line">        <span class="keyword">if</span>(!<span class="keyword">this</span>.order) <span class="keyword">this</span>.order = &#123;&#125;</div><div class="line">        <span class="keyword">this</span>.order.verify_code = <span class="string">''</span></div><div class="line">                ...</div><div class="line">    &#125;</div><div class="line"> &#125;,</div><div class="line"> <span class="attr">route</span>: &#123;</div><div class="line">    data() &#123;</div><div class="line">        <span class="keyword">this</span>.reload()</div><div class="line">    &#125;</div><div class="line"> &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure><br>意思是，从<code>cookie</code>中取出<code>order</code>数据，如果<code>cookie</code>中没有<code>order</code>数据，就创建一个空的<code>order</code>，把验证码这一数据置空。路由切换的时候就执行<code>reload()</code>函数。</p>
-<p>大致思路是没有问题的，可是测试时<code>order.verify_code</code>的值并不是表单中输入的值，而且也不随着表单输入的更新而更新数据。</p>
-<p>更难以理解的bug是点击输入验证码后，点击其他表单进行输入时，刚才输入的验证码就会自动清空，有时会直接切换显示出上次输入的数据。</p>
-<p>通过打印了一堆日志发现，<code>order</code>的值只在点击提交才会存储变更，这并不是我想要的结果。而且<code>order</code>的值并没有通过Vue生成对应的 getter/setter 属性。</p>
-<h2 id="列出疑问"><a href="#列出疑问" class="headerlink" title="列出疑问"></a>列出疑问</h2><ol>
-<li>为什么输入的数据会清空？</li>
-<li>为什么<code>order.verify_code</code>的数据不是动态响应用户输入的？</li>
-<li>为什么刷新页面后<code>order.verify_code</code>的值是刷新之前填写的值？</li>
-<li>为什么Vue不自动生成属性相对应的 getter/setter ？</li>
-</ol>
-<h1 id="探索既是发现"><a href="#探索既是发现" class="headerlink" title="探索既是发现"></a>探索既是发现</h1><h2 id="针对问题寻找答案"><a href="#针对问题寻找答案" class="headerlink" title="针对问题寻找答案"></a>针对问题寻找答案</h2><p>我很清楚，问题肯定是出在<code>reload()</code>函数的代码中，但是究竟要怎么修改呢？为了找到出现这种状况的原因，我仔细研读了Vue的官方文档。下面就针对这次的问题科普下Vue的知识：</p>
-<p>关于<code>深入响应式原理</code>，官方文档是这样写的：<br><blockquote><ol>
-<li><p>如何追踪变化：把一个普通对象传给Vue实例作为它的<code>data</code>选项，Vue.js将遍历它的属性，用<code>object.defineProperty</code>将它们转为 getter/setter。</p>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>插入排序，顾名思义是将元素插入到有序数组中的适当位置中。</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>将 N 个元素的数列分为已有序和无序两个部分；<br>每次处理将无序数列的第一个元素与有序数列的元素从后往前逐个比较；<br>插入适当位置。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>对于随机排列的长度为 N 且值不重复的数组，最坏情况下（降序排列）需要 N^2/2 次比较和 N^2/2 次交换；最好情况（已经是升序排列）需要 N-1 次比较和 0 次交换。</p>
+<p>平均来说，插入排序的时间复杂度为 O(n^2)。</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><ol>
+<li><p>所需的时间取决于数组元素的初始顺序。当用插入排序排列一组有序数组或所有元素值相同的数组时，插入排序能够立即发现每个元素都已经在合适的位置上，它的运行时间是线性的。</p>
 </li>
-<li><p>变化检测问题：受ES5的限制，Vue.js<strong>不能检测到对象属性的添加或删除</strong>。因为Vue.js在初始化实例时将属性转为 getter/setter，所以属性必须在<code>data</code>对象上才能让Vue.js转换它，才能让它是响应的。</p>
+<li><p>稳定性。插入排序是在一个已经有序的小序列的基础上，一次插入一个元素。当刚开始时只有一个元素，即第一个元素。比较是从有序序列的末尾开始的，要插入的元素和有序列表的最大数开始比起，如果比它大则插入其后面，否则一直往前找到适当的位置插入。如果元素相等，那么要插入的元素会放在相等元素后面，所以相等元素的前后顺序是没有改变的。</p>
 </li>
 </ol>
-<footer><strong>Vue官方文档</strong><cite><a href="http://cn.vuejs.org/guide/reactivity.html" target="_blank" rel="external">cn.vuejs.org/guide/reactivity.html</a></cite></footer></blockquote><br>例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = &#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</div><div class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">    <span class="attr">data</span>:data</div><div class="line">&#125;)  <span class="comment">// vm.a 和 data.a 是响应的</span></div><div class="line"></div><div class="line">vm.b = <span class="number">2</span> <span class="comment">// 不响应</span></div><div class="line"></div><div class="line">data.b = <span class="number">2</span> <span class="comment">//不响应</span></div></pre></td></tr></table></figure><br>看到这里，我的疑惑就已经清晰了，原来文档中写的很清楚。</p>
-<p>并且在<code>data</code>的API解释时，文档中也说明了：<br><blockquote><p>Vue实例的数据对象，Vue.js会递归地将它全部属性转换为 getter/setter，从而让它能响应数据变化。<strong>这个对象必须是普通对象</strong>，原生对象 getter/setter 及原型属性会被忽略。</p>
-<footer><strong>Vue官方文档</strong><cite><a href="http://cn.vuejs.org/api/#data" target="_blank" rel="external">cn.vuejs.org/api/#data</a></cite></footer></blockquote></p>
-<p>所以原因出在，我没有在<code>data</code>中事先声明<code>order</code>中的各个属性，导致Vue在创建实例时没有遍历到这些参数从而转换成相应的 getter/setter ，也就无法检测到这些属性的变化。</p>
-<h2 id="更改问题代码"><a href="#更改问题代码" class="headerlink" title="更改问题代码"></a>更改问题代码</h2><p>找到了问题的根本，也理解的问题的发生原因，我需要修改我的代码。正确的代码应为是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">data()&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="attr">order</span>: &#123;</div><div class="line">            <span class="attr">verify_code</span>: <span class="string">''</span>,</div><div class="line">            <span class="attr">phone</span>: <span class="string">''</span>,</div><div class="line">            <span class="attr">real_name</span>: <span class="string">''</span>,</div><div class="line">                ...</div><div class="line">            add_detail: <span class="string">''</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;,</div><div class="line"><span class="attr">methods</span>: &#123;</div><div class="line">    data()&#123;</div><div class="line">        reload() &#123;</div><div class="line">            <span class="keyword">let</span> order_cookie = getCookie(<span class="string">'order'</span>)</div><div class="line">            <span class="keyword">if</span> (order_cookie) &#123;</div><div class="line">              <span class="keyword">this</span>.order.phone = order_cookie.phone</div><div class="line">                    ...</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">this</span>.order.verify_code = <span class="string">''</span></div><div class="line">                    ...</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;,</div><div class="line"><span class="attr">route</span>: &#123;</div><div class="line">    data() &#123;</div><div class="line">        <span class="keyword">this</span>.reload()</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-<p>问题解决了，归根结底好像是我没有好好阅读官方文档的缘故，好尴尬呀～不过在这之后，我准备仔细看一遍官方文档，了解Vue深层运作的原理，分析一下源代码。</p>
-<p>作为一个Vue初学者，差的还远呢。</p>
-<h2 id="解决方法不唯一"><a href="#解决方法不唯一" class="headerlink" title="解决方法不唯一"></a>解决方法不唯一</h2><p>同样，在浏览官方文档的时候，也发现了针对这次遇到的问题的另一个解决办法。俗话说嘛，条条大路通罗马，我们Vue的大神也留了另一条路让我们过坑。</p>
-<p>还是引用官方文档的描述：<br><blockquote><p>有办法在实例创建之后<strong>添加属性并且让它是响应的</strong>。<br>对于Vue实例，可以使用<code>$set(key, value)</code>实例方法：<br>    <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vm.$set(<span class="string">‘b’</span>, <span class="number">2</span>)</div><div class="line"><span class="comment">// vm.b 和 data.b 现在是响应的</span></div></pre></td></tr></table></figure><br>对于普通数据对象，可以使用全局方法<code>Vue.set(object, key, value)</code>：<br>    <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Vue.set(data, <span class="string">‘c’</span>, <span class="number">3</span>)</div><div class="line"><span class="comment">// vm.c 和 data.c 现在是响应的</span></div></pre></td></tr></table></figure><br>有时你想向已有对象上添加一些属性，例如使用<code>Object.assigh()</code>或<code>_.extend()</code>添加属性。但是添加到对象上的新属性不会触发更新。<br>这时，可以创建一个新对象，包含原对象的属性和新的属性：<br>    <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.someObject = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.someObject, &#123;<span class="attr">a</span>:<span class="number">1</span>, <span class="attr">b</span>:<span class="number">2</span>&#125;)</div><div class="line"><span class="comment">// 不使用 Object.assign(this.someObject, &#123;a:1, b:2&#125;)</span></div></pre></td></tr></table></figure></p>
-<footer><strong>Vue官方文档</strong><cite><a href="http://cn.vuejs.org/guide/reactivity.html" target="_blank" rel="external">cn.vuejs.org/guide/reactivity.html</a></cite></footer></blockquote></p>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight js"><figcaption><span>example.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert_sort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> temp, i, j;</div><div class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">    temp = arr[i];</div><div class="line">    j = i - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>((j &gt;= <span class="number">0</span>) &amp;&amp; (arr[j] &gt; temp)) &#123;</div><div class="line">      arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">      j--;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">if</span> (j != i<span class="number">-1</span>) &#123;</div><div class="line">      arr[j+<span class="number">1</span>] = temp;</div><div class="line">    &#125;;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我给<code>insert_sort()</code>函数增加几行 console 打印出在循环内各个参数值和数组的变化，这样可以更直观的了解到函数是如何一步步给数组排序的。<br><img src="/images/排序算法之插入排序/code-example.png" alt="添加console语句后的insert_sort()函数"></p>
+<p>接着来看一下函数到底打印的结果：<br><img src="/images/排序算法之插入排序/example1.jpeg" alt="打印循环中的各个数组参数和结果"></p>
+<p>其实图中 temp 参数的说明并不准确，应该是 temp 表示无序数组的第一元素的值。</p>
+<p>我来一步步的说明<code>insert_sort()</code>函数的排序过程，当中究竟发生了什么：</p>
+<p>我给出了数组<code>arr=[4,2,9,5,2]</code>，共 5 个元素的数组，所以总的外循环次数也应为 5 次。对于 0 到 N-1 之间的每个 i ，将 a[i] 与 a[0] 到 a[i-1]中比它小的所有元素依次有序地交换，i 左侧的元素总是有序的。</p>
+<p><strong>第一轮循环</strong> 我们对照着上面的函数来看，进入for循环时，<code>i = 0，temp = 4，j = -1</code>；<br>然后到达while循环处进行判断：-1 &gt;= 0 就已经不成立了，所以直接跳过while循环；<br>接下来到达if判断处：-1 != -1 也不成立，跳过if直接输出 “4—“。<br>这一步的作用就是把数组第一个元素插入到有序数组中，因为刚开始插入，有序数组并没有值，所以直接把无序数组第一元素插入就好，并不用判断大小。<br>至此，数组为：<code>[4,2,9,5,2]</code></p>
+<p><strong>第二轮循环</strong> 此时，<code>i = 1，temp = 2，j = 0</code>；<br>到达while循环判断：0 &gt;= 0 和 4 &gt; 2 成立，进入while循环执行：<code>2 = 4, j = -1</code>，到此 j 已经不符合while循环的判断，所以不再继续循环；<br>然后是if判断：-1 != 0 成立，执行：<code>4 = 2</code>；<br>结束，输出 “4—“，这一步把无序数组的第一个元素 2 与 有序数组的最后一个元素 4 作比较，2 &lt; 4 ，所以在内循环中把 4 向右移动一位，又在if中把 2 插入到有序数组的第一位置。<br>至此， 数组为：<code>[2,4,9,5,2]</code></p>
+<p><strong>第三轮循环</strong> 此时，<code>i = 2, temp = 9, j = 1</code>；<br>来到while循环进行判断：1 &gt;= 0 和 4 &gt; 9，显然第二个表达式并不成立，所以跳过while循环；<br>接着是if判断：1 != 1 也不成立，跳过，直接输出 “4—“。<br>这一步取出无序数组的第一元素 9 ，与有序列表的最后一个元素 4 比较，4 &lt; 9，所以直接把 9 放到 4 的后面位置即可。<br>至此，数组为：<code>[2,4,9,5,2]</code></p>
+<p><strong>第四轮循环</strong> 此时，<code>i = 3, temp = 5, j = 2</code>；<br>到了while循环判断：2 &gt;= 0 和 9 &gt; 5 成立，执行：<code>5 = 9，j = 1</code>；<br>继续while判断：1 &gt;= 0 和 4 &gt; 5，第二表达式不成立，不再继续while循环；<br>直接到if判断：1 ！= 2 成立，执行：9 = 5；<br>这一步把无序数组第一元素 5 和有序数组 9 作比较，5 &lt; 9 所以元素 9 向右移动一位，又判断了 5 &lt; 4 但不成立，所以元素 5 就插入到 9 之前的位置。<br>至此，数组为：<code>[2,4,5,9,2]</code></p>
+<p><strong>第五轮循环</strong> 此时，<code>i = 4，temp = 2, j = 3</code>;<br>又进行while循环判断：3 &gt;= 0 和 9 &gt; 2 成立，执行：<code>2 = 9, j = 2</code>;<br>继续while判断：2 &gt;= 0 和 5 &gt; 2 成立，执行：<code>9 = 5, j = 1</code>;<br>继续while判断：1 &gt;= 0 和 4 &gt; 2 成立，执行：<code>5 = 4, j = 0</code>;<br>继续while判断：0 &gt;= 0 和 2 &gt; 2 第二表达式不成立，跳出while循环；<br>接着是if判断：0 != 3 成立，执行：4 = 2;<br>这一步无序数组只剩下 2 ，它依次与有序数组的 9、5、4、2比较，最终插入到 4 的前面，元素 4、5、9 都依次向右移动了一位。<br>最终，数组为：<code>[2,2,4,5,9]</code></p>
+<p>自己把数组带入函数内，一步步的记下各个事态会让整个思路都清晰的，也能更清楚参数的变化和数组元素的移动。所以我每次都会用一个很短的数组自己手动执行一次函数，写出每时每刻的值，这样可以更好的让算法带领你一步步的移动元素、排列数组。</p>
 <h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
-<li><a href="http://cn.vuejs.org/guide/reactivity.html" target="_blank" rel="external">Vue官方文档-深入响应式原理</a></li>
+<li><a href="http://www.ituring.com.cn/book/875" target="_blank" rel="external">图灵程序设计丛书–算法(第4版)</a></li>
 </ul>
 <hr>
 
@@ -318,7 +304,7 @@
         <! -- 添加版权信息 -->
         <div class="article-footer-copyright">
             <center>
-                <img src="/images/Vue关于data数据的深度响应原理/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
+                <img src="/images/排序算法之插入排序/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
             </center>
             <center>本文由
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
@@ -326,10 +312,10 @@
             </center>
             <center>本文作者为
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
-                ，本文标题为《 <b><a href="/2016/10/26/Vue关于data数据的深度响应原理/" target="_blank" title="Vue关于data数据的深度响应原理">Vue关于data数据的深度响应原理</a></b> 》
+                ，本文标题为《 <b><a href="/2016/11/28/排序算法之插入排序/" target="_blank" title="排序算法之插入排序">排序算法之插入排序</a></b> 》
             </center>
             <center>本文永久链接为：
-                <b><a href="/2016/10/26/Vue关于data数据的深度响应原理/" target="_blank" title="Vue关于data数据的深度响应原理">http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/</a></b>
+                <b><a href="/2016/11/28/排序算法之插入排序/" target="_blank" title="排序算法之插入排序">http://lemon23.me/2016/11/28/排序算法之插入排序/</a></b>
             </center>
         </div>
         <! -- 添加版权信息 -->
@@ -342,7 +328,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/" data-id="ciw1qo7vh0004560e73qtt4n8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw1qo7vk0005560emmqpq40t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -428,7 +414,7 @@
 
             
     
-        <a href="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/">评论</a>
+        <a href="http://lemon23.me/2016/11/28/排序算法之插入排序/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2016/11/28/排序算法之插入排序/">评论</a>
     
 
         </footer>
@@ -437,21 +423,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/11/02/Soft-Cat/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇:</strong>
-            <div class="article-nav-title">
-                
-                    Soft-Cat
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/10/21/Hexo的过坑记/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/11/25/排序算法之选择排序/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇:</strong>
             <div class="article-nav-title">
                 
-                    Hexo的过坑记
+                    排序算法之选择排序
                 
             </div>
         </a>
@@ -467,7 +444,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/10/26/Vue关于data数据的深度响应原理/" data-title="Vue关于data数据的深度响应原理" data-url="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/"></div>
+    <div class="ds-thread" data-thread-key="2016/11/28/排序算法之插入排序/" data-title="排序算法之插入排序" data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;

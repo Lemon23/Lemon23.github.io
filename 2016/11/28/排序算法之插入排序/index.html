@@ -13,7 +13,9 @@
 <meta property="og:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/code-example.png">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/example1.jpeg">
-<meta property="og:updated_time" content="2016-11-29T04:26:56.000Z">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/arr10.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/arr100.png">
+<meta property="og:updated_time" content="2016-11-29T09:06:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法之插入排序">
 <meta name="twitter:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
@@ -260,7 +262,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插入排序"><span class="toc-number">1.</span> <span class="toc-text">插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.1.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.3.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插入排序"><span class="toc-number">1.</span> <span class="toc-text">插入排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.1.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.3.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#比较插入排序和选择排序"><span class="toc-number">3.</span> <span class="toc-text">比较插入排序和选择排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">4.</span> <span class="toc-text">参考文档</span></a></li></ol>
                 </div>
             <script>
                 $('#toc').click(function() {
@@ -291,8 +293,17 @@
 <p><strong>第四轮循环</strong> 此时，<code>i = 3, temp = 5, j = 2</code>；<br>到了while循环判断：2 &gt;= 0 和 9 &gt; 5 成立，执行：<code>5 = 9，j = 1</code>；<br>继续while判断：1 &gt;= 0 和 4 &gt; 5，第二表达式不成立，不再继续while循环；<br>直接到if判断：1 ！= 2 成立，执行：9 = 5；<br>这一步把无序数组第一元素 5 和有序数组 9 作比较，5 &lt; 9 所以元素 9 向右移动一位，又判断了 5 &lt; 4 但不成立，所以元素 5 就插入到 9 之前的位置。<br>至此，数组为：<code>[2,4,5,9,2]</code></p>
 <p><strong>第五轮循环</strong> 此时，<code>i = 4，temp = 2, j = 3</code>;<br>又进行while循环判断：3 &gt;= 0 和 9 &gt; 2 成立，执行：<code>2 = 9, j = 2</code>;<br>继续while判断：2 &gt;= 0 和 5 &gt; 2 成立，执行：<code>9 = 5, j = 1</code>;<br>继续while判断：1 &gt;= 0 和 4 &gt; 2 成立，执行：<code>5 = 4, j = 0</code>;<br>继续while判断：0 &gt;= 0 和 2 &gt; 2 第二表达式不成立，跳出while循环；<br>接着是if判断：0 != 3 成立，执行：4 = 2;<br>这一步无序数组只剩下 2 ，它依次与有序数组的 9、5、4、2比较，最终插入到 4 的前面，元素 4、5、9 都依次向右移动了一位。<br>最终，数组为：<code>[2,2,4,5,9]</code></p>
 <p>自己把数组带入函数内，一步步的记下各个事态会让整个思路都清晰的，也能更清楚参数的变化和数组元素的移动。所以我每次都会用一个很短的数组自己手动执行一次函数，写出每时每刻的值，这样可以更好的让算法带领你一步步的移动元素、排列数组。</p>
+<h1 id="比较插入排序和选择排序"><a href="#比较插入排序和选择排序" class="headerlink" title="比较插入排序和选择排序"></a>比较插入排序和选择排序</h1><p>同样是排序算法，那么到底哪种排序算法更快呢？</p>
+<p>选择排序无论数组是正序还是倒序排列，都要整体扫描一遍数组，而插入排序可以很快发现数字是否已在合适位置上。那么理论上插入排序应该比选择排序快，到底这个理论正不正确，我需要通过实践来验证它：</p>
+<p>我写了两个验证函数——<code>t1()</code>和<code>t2()</code>。（验证函数源代码地址写在最后的参考文档中）这两个函数的作用都是根据传入参数 count，生成 count 组由 0 到 10 随机生成的 10 位数数组，然后计算其开始时间到结束时间的差，并分别使用插入排序和选择排序排列随即数组，看看到底哪种算法更快。</p>
+<p>结果：<br><img src="/images/排序算法之插入排序/arr10.png" alt="随机数0-10，数组长度10"><br>上图中，我打印出了两种排序算法的运行时间，可以看出插入排序所用时间比选择排序快一点的。虽然我传入了 100000 ，也就是生成 100000 组随机数数组，但单位是毫秒，也就是两种算法平均有0.04秒的差距，实际肉眼可见差距并不大，如果我不打印出时间来是感觉不到的。</p>
+<p>下面我更改一下两个函数，生成由 0 到 100 随机生成的 100 位数数组，这样工作量应该大了不少，我们再来看一下两个函数的运行时间：<br><img src="/images/排序算法之插入排序/arr100.png" alt="随机数0-100，数组长度100"><br>这次我只实验了三组数据，因为已经明显感觉到等待的时间了。这次选择排序的运行时间最高达到了 11586 毫秒，也就是有 11秒5 的时间在是计算中。你可以自己数 11 秒种，就能体会运行时间有多长了。</p>
+<p>当然，这只是基于随即数组进行的实验，有兴趣的可以基于正序、倒序、元素值相同的数组进行测试。</p>
+<p>所以，结论是 <strong>在随机数数组中，插入排序比选择排序执行速度更快</strong> 。</p>
 <h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
 <li><a href="http://www.ituring.com.cn/book/875" target="_blank" rel="external">图灵程序设计丛书–算法(第4版)</a></li>
+<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/insert_sort.js" target="_blank" rel="external">插入排序函数源代码 (github/Lemon23/Algorithms-Lib/Sort Algorithm/)</a></li>
+<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/test_s_i.js" target="_blank" rel="external">验证函数源代码</a></li>
 </ul>
 <hr>
 
@@ -327,7 +338,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw3052b00005770e34ggf8ta" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw36gp470005y60eizbodyip" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),

@@ -1953,6 +1953,7 @@ ol.toc {
   line-height: 2.3em;
 }
 .tagcloud a {
+  font-size: 14px;
   margin-right: 5px;
   padding: 0.1em 0.5em;
   border: 1px solid #888;

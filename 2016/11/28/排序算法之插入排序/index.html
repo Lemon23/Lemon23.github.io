@@ -15,7 +15,7 @@
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/example1.jpeg">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/arr10.png">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/arr100.png">
-<meta property="og:updated_time" content="2016-11-29T09:06:44.000Z">
+<meta property="og:updated_time" content="2016-11-29T09:11:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法之插入排序">
 <meta name="twitter:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
@@ -298,7 +298,7 @@
 <p>我写了两个验证函数——<code>t1()</code>和<code>t2()</code>。（验证函数源代码地址写在最后的参考文档中）这两个函数的作用都是根据传入参数 count，生成 count 组由 0 到 10 随机生成的 10 位数数组，然后计算其开始时间到结束时间的差，并分别使用插入排序和选择排序排列随即数组，看看到底哪种算法更快。</p>
 <p>结果：<br><img src="/images/排序算法之插入排序/arr10.png" alt="随机数0-10，数组长度10"><br>上图中，我打印出了两种排序算法的运行时间，可以看出插入排序所用时间比选择排序快一点的。虽然我传入了 100000 ，也就是生成 100000 组随机数数组，但单位是毫秒，也就是两种算法平均有0.04秒的差距，实际肉眼可见差距并不大，如果我不打印出时间来是感觉不到的。</p>
 <p>下面我更改一下两个函数，生成由 0 到 100 随机生成的 100 位数数组，这样工作量应该大了不少，我们再来看一下两个函数的运行时间：<br><img src="/images/排序算法之插入排序/arr100.png" alt="随机数0-100，数组长度100"><br>这次我只实验了三组数据，因为已经明显感觉到等待的时间了。这次选择排序的运行时间最高达到了 11586 毫秒，也就是有 11秒5 的时间在是计算中。你可以自己数 11 秒种，就能体会运行时间有多长了。</p>
-<p>当然，这只是基于随即数组进行的实验，有兴趣的可以基于正序、倒序、元素值相同的数组进行测试。</p>
+<p>当然，这只是基于随机数组进行的实验，有兴趣的可以基于正序、倒序、元素值相同的数组进行测试。</p>
 <p>所以，结论是 <strong>在随机数数组中，插入排序比选择排序执行速度更快</strong> 。</p>
 <h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
 <li><a href="http://www.ituring.com.cn/book/875" target="_blank" rel="external">图灵程序设计丛书–算法(第4版)</a></li>
@@ -338,7 +338,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw36gp470005y60eizbodyip" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw3aasl10005oa0ehtpumh72" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),

@@ -13,7 +13,7 @@
 <meta property="og:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/code-example.png">
 <meta property="og:image" content="http://lemon23.me/images/排序算法之插入排序/example1.jpeg">
-<meta property="og:updated_time" content="2016-11-29T03:59:25.000Z">
+<meta property="og:updated_time" content="2016-11-29T04:26:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排序算法之插入排序">
 <meta name="twitter:description" content="插入排序同样是排序算法，它和上一篇所说的”选择排序”到底有什么区别呢？又该在什么情况下使用插入排序呢？带着疑问开始学习，在学习中尝试解答，我觉得这是一个好的学习方法。(^-^)">
@@ -283,8 +283,7 @@
 <h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight js"><figcaption><span>example.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert_sort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> temp, i, j;</div><div class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">    temp = arr[i];</div><div class="line">    j = i - <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>((j &gt;= <span class="number">0</span>) &amp;&amp; (arr[j] &gt; temp)) &#123;</div><div class="line">      arr[j+<span class="number">1</span>] = arr[j];</div><div class="line">      j--;</div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">if</span> (j != i<span class="number">-1</span>) &#123;</div><div class="line">      arr[j+<span class="number">1</span>] = temp;</div><div class="line">    &#125;;</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我给<code>insert_sort()</code>函数增加几行 console 打印出在循环内各个参数值和数组的变化，这样可以更直观的了解到函数是如何一步步给数组排序的。<br><img src="/images/排序算法之插入排序/code-example.png" alt="添加console语句后的insert_sort()函数"></p>
 <p>接着来看一下函数到底打印的结果：<br><img src="/images/排序算法之插入排序/example1.jpeg" alt="打印循环中的各个数组参数和结果"></p>
-<p>其实图中 temp 参数的说明并不准确，应该是 temp 表示无序数组的第一元素的值。</p>
-<p>我来一步步的说明<code>insert_sort()</code>函数的排序过程，当中究竟发生了什么：</p>
+<p>我来一步步的解析<code>insert_sort()</code>函数的排序过程，当中究竟发生了什么：</p>
 <p>我给出了数组<code>arr=[4,2,9,5,2]</code>，共 5 个元素的数组，所以总的外循环次数也应为 5 次。对于 0 到 N-1 之间的每个 i ，将 a[i] 与 a[0] 到 a[i-1]中比它小的所有元素依次有序地交换，i 左侧的元素总是有序的。</p>
 <p><strong>第一轮循环</strong> 我们对照着上面的函数来看，进入for循环时，<code>i = 0，temp = 4，j = -1</code>；<br>然后到达while循环处进行判断：-1 &gt;= 0 就已经不成立了，所以直接跳过while循环；<br>接下来到达if判断处：-1 != -1 也不成立，跳过if直接输出 “4—“。<br>这一步的作用就是把数组第一个元素插入到有序数组中，因为刚开始插入，有序数组并没有值，所以直接把无序数组第一元素插入就好，并不用判断大小。<br>至此，数组为：<code>[4,2,9,5,2]</code></p>
 <p><strong>第二轮循环</strong> 此时，<code>i = 1，temp = 2，j = 0</code>；<br>到达while循环判断：0 &gt;= 0 和 4 &gt; 2 成立，进入while循环执行：<code>2 = 4, j = -1</code>，到此 j 已经不符合while循环的判断，所以不再继续循环；<br>然后是if判断：-1 != 0 成立，执行：<code>4 = 2</code>；<br>结束，输出 “4—“，这一步把无序数组的第一个元素 2 与 有序数组的最后一个元素 4 作比较，2 &lt; 4 ，所以在内循环中把 4 向右移动一位，又在if中把 2 插入到有序数组的第一位置。<br>至此， 数组为：<code>[2,4,9,5,2]</code></p>
@@ -328,7 +327,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw2zieat0005he0e6s8iq0vc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw3052b00005770e34ggf8ta" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),

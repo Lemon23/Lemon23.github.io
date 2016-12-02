@@ -678,7 +678,7 @@ code {
   font-weight: 600;
 }
 #profile .inner .base-info #title {
-  font: 23px LingWai SC;
+  font: 20px LingWai SC;
 }
 #profile .inner .base-info #location {
   font-size: 12px;
@@ -892,7 +892,7 @@ a.article-title:hover {
   content: "";
 }
 .article-tag .tag-link:hover {
-  background-color: rgba(255,40,50,0.6);
+  background-color: #f56;
   color: #fff;
 }
 .busuanzi_container_page_pv {

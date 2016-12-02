@@ -3,20 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Soft-Cat | Lemon&#39;s Blog</title>
+    <title>排序算法之希尔排序 | Lemon&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="自主设计构建的一个”关爱流浪猫”官网的封面页。">
+    <meta name="description" content="希尔排序，是一种基于插入排序的快速的排序算法。希尔排序为了加快速度，交换不相邻的元素，以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Soft-Cat">
-<meta property="og:url" content="http://lemon23.me/2016/11/02/Soft-Cat/index.html">
+<meta property="og:title" content="排序算法之希尔排序">
+<meta property="og:url" content="http://lemon23.me/2016/12/01/排序算法之希尔排序/index.html">
 <meta property="og:site_name" content="Lemon's Blog">
-<meta property="og:description" content="自主设计构建的一个”关爱流浪猫”官网的封面页。">
-<meta property="og:image" content="http://lemon23.me/images/Soft-Cat/img1.png">
-<meta property="og:updated_time" content="2016-11-02T09:32:05.000Z">
+<meta property="og:description" content="希尔排序，是一种基于插入排序的快速的排序算法。希尔排序为了加快速度，交换不相邻的元素，以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之希尔排序/code-example.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之希尔排序/example1.jpeg">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之希尔排序/arr100.png">
+<meta property="og:updated_time" content="2016-12-02T03:02:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Soft-Cat">
-<meta name="twitter:description" content="自主设计构建的一个”关爱流浪猫”官网的封面页。">
-<meta name="twitter:image" content="http://lemon23.me/images/Soft-Cat/img1.png">
+<meta name="twitter:title" content="排序算法之希尔排序">
+<meta name="twitter:description" content="希尔排序，是一种基于插入排序的快速的排序算法。希尔排序为了加快速度，交换不相邻的元素，以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。">
+<meta name="twitter:image" content="http://lemon23.me/images/排序算法之希尔排序/code-example.png">
     
 
     
@@ -192,16 +194,8 @@
 
 
             
-            <section id="main"><article id="post-Soft-Cat" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-排序算法之希尔排序" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-            
-	
-		<img src="/images/Soft-Cat/img1.png" class="article-banner" />
-	
-
-
-
         
 
         
@@ -209,7 +203,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Soft-Cat
+            排序算法之希尔排序
         </h1>
     
 
@@ -218,8 +212,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2016/11/02/Soft-Cat/">
-            <time datetime="2016-11-02T05:04:03.000Z" itemprop="datePublished">2016-11-02</time>
+        <a href="/2016/12/01/排序算法之希尔排序/">
+            <time datetime="2016-12-01T06:31:14.000Z" itemprop="datePublished">2016-12-01</time>
         </a>
     </div>
 
@@ -227,13 +221,13 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/设计/">设计</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/设计/网页构建/">网页构建</a>
+        <a class="article-category-link" href="/categories/技术/">技术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/算法/">算法</a>
     </div>
 
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/动物/">动物</a>, <a class="tag-link" href="/tags/封面页/">封面页</a>, <a class="tag-link" href="/tags/欧美/">欧美</a>, <a class="tag-link" href="/tags/清新/">清新</a>, <a class="tag-link" href="/tags/简约/">简约</a>
+        <a class="tag-link" href="/tags/初级算法/">初级算法</a>, <a class="tag-link" href="/tags/排序/">排序</a>
     </div>
 
                     </div>
@@ -249,7 +243,7 @@
                     </span>
                     <span class="head-plus">
                         <i class="fa fa-comments"></i>
-                        <span class="ds-thread-count" data-thread-key="2016/11/02/Soft-Cat/">
+                        <span class="ds-thread-count" data-thread-key="2016/12/01/排序算法之希尔排序/">
                             <i class="fa fa-spinner fa-spin"></i>
                         </span>条评论
                     </span>
@@ -265,24 +259,55 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>自主设计构建的一个”关爱流浪猫”官网的封面页。</p>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#希尔排序"><span class="toc-number">1.</span> <span class="toc-text">希尔排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.1.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.3.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#比较希尔排序和插入排序"><span class="toc-number">3.</span> <span class="toc-text">比较希尔排序和插入排序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">4.</span> <span class="toc-text">参考文档</span></a></li></ol>
+                </div>
+            <script>
+                $('#toc').click(function() {
+                    $('.toc').slideToggle(500);
+                });
+            </script>
+            
+            <p>希尔排序，是一种基于插入排序的快速的排序算法。希尔排序为了加快速度，交换不相邻的元素，以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序。</p>
 <a id="more"></a>
-<p>我们先来看一下页面效果：<br><img src="/images/Soft-Cat/pc.png" alt="Soft Cat官网封面页 · 效果图"></p>
-<h3 id="页面描述"><a href="#页面描述" class="headerlink" title="页面描述"></a>页面描述</h3><p>页面整体为 “现代 欧美 清新 简约” 的风格。</p>
-<p>进入网站最夺人眼球的是网站中间用白色粗体的大字凸显出的网站主旨——“Soft Cat”，其次就是符合主题的背景图，我选用了一只躺在毛毯上的小猫，同时为背景作了半透明处理，为了用户能够看清白色的文字。</p>
-<p>网站整体的颜色再搭配文字，给用户的第一感觉是简约又大方，而纯净的页面中那粉色的心形标志就更显得夺目，使用户会不由自主的把目光移到那里。</p>
-<p>简单的页面就要搭配少量的文字，字多了排版也是问题，而且用户会产生反感，不想去阅读和浏览。我通过文字的大小粗细进行排版，使用户能很快的分清楚文字的布局，从少量的文字中明白这个网站是干什么的！</p>
-<p>现在我分解展示一下这个网站的各个部分：</p>
-<h3 id="LOGO"><a href="#LOGO" class="headerlink" title="LOGO"></a>LOGO</h3><p><img src="/images/Soft-Cat/pc_logo.png" alt="Soft Cat官网封面页 · LOGO"><br>网站Logo我用了我自己的名字，并没有加入图片，因为这个字体已经很好看了。一个页面的Logo是很重要的，它是网站的门面，也是别人能否记住你是谁的决定性因素！<br>这里我使用了<code>Pacifico</code>字体，并且在字母间作了间隔，目的是可以让用户更清楚的看到每个字母并记住它。<br><figure class="highlight less"><figcaption><span>index.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">font-family</span>: Pacifico, Snell Roundhand;</div><div class="line"><span class="attribute">font-weight</span>: <span class="number">500</span>;</div><div class="line"><span class="attribute">letter-spacing</span>: <span class="number">3px</span>;</div></pre></td></tr></table></figure></p>
-<h3 id="Nav"><a href="#Nav" class="headerlink" title="Nav"></a>Nav</h3><p><img src="/images/Soft-Cat/pc_nav.png" alt="Soft Cat官网封面页 · Nav"></p>
-<p>网站导航也是很重要的，要让用户能够看明白导航可以带他去到哪里，和我身处什么位置。相对于这种简洁的页面，导航需要至少两种状态：鼠标移上和点击后。</p>
-<p>下面是这两种状态的样式效果：<br><img src="/images/Soft-Cat/pc_nav_hover.png" alt="Soft Cat官网封面页 · Nav · 鼠标移上"><br><img src="/images/Soft-Cat/pc_nav_active.png" alt="Soft Cat官网封面页 · Nav · 点击后"></p>
-<p>页面层次多的最好使用”面包屑”导航，或者在这个基础上构建二级导航，给用户一个好的浏览体验。</p>
-<h3 id="主体"><a href="#主体" class="headerlink" title="主体"></a>主体</h3><p><img src="/images/Soft-Cat/pc_main.jpeg" alt="Soft Cat官网封面页 · 主体"><br>这个部分是网站的精髓所在，你要告诉用户，这是关于什么的网站？可以干什么？它包括了网站的主旨、标语、关爱语和心型按钮：<br><img src="/images/Soft-Cat/pc_main1.jpeg" alt="Soft Cat官网封面页 · 主体剖析"></p>
-<p>在样式中，我使用了<code>flex</code>布局，可以响应各种尺寸的屏幕，用过一次就爱上了它。页面中的文字可以根据实际情况做更改，样式布局也可以随心所欲，重点是在没有使用边框的时候，你应该能让用户区分出文字的排版。</p>
-<p>在页面中我添加了一个小动效，使网站使用起来不枯燥。就是粉色的心型按钮，点击后会3D旋转三圈，然后提示用户”Thank for you”。无论在使用中它的作用是筹款，还是点赞，我只是无聊添加个小玩意。可以看源代码，其实只有6行。</p>
-<h3 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h3><p>文件地址：<a href="https://github.com/Lemon23/Pages/tree/master/Soft%20Cat" target="_blank" rel="external">Github-Lemon23/Pages/Soft Cat</a></p>
-<p><strong>如果你喜欢这个页面的话，给个赞吧！</strong></p>
+<h1 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h1><p>希尔排序的中心思想是：使数组中任意间隔为 f 的元素都是有序的。</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>先将要排序的一组数按某个增量 f 分成若干组，每组中记录下标相差 f；<br>对每组中全部元素进行排序，然后用一个较小的增量对它进行上述步骤，在每组中再进行排序；<br>直到增量为 1 时，即所有要排序的数分成一组。</p>
+<p>一般的，初次取序列长度的一半为增量，以后每次减半，直到增量为 1。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>希尔排序的时间复杂度与增量序列的选取有关，目前已知它的运行时间达不到平方级别，在最坏的情况下希尔排序的比较次数和 N^(3/2) 成正比。平均每个增幅所带来的比较次数约为 N^(1/5)，但只有在 N 很大的时候这个增幅才会变的明显。</p>
+<p>希尔排序的时间复杂度的下界是 n*log2n。希尔排序对中等大小规模的数组表现良好，在最坏情况下和平均情况下执行效率差不多。</p>
+<p>希尔排序是按照不同步长对元素进行插入排序，当刚开始元素很无序的时候，步长最大，所以插入排序的元素个数很少，速度很快；当元素基本有序了，步长很小，插入排序对于有序的序列效率很高。所以，希尔排序的时间复杂度会比o(n^2)好一些。</p>
+<h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><ol>
+<li><p>希尔排序的执行时间依赖于增量序列。</p>
+</li>
+<li><p>希尔排序更高效的原因是它权衡了自数组的规模和有序性。在开始各个数组都很短，排序后数组都是部分有序的，这种情况很适合插入排序。自数组部分有序的成都取决于递增序列的选择。</p>
+</li>
+<li><p>代码量小且不需额外的内存空间。</p>
+</li>
+</ol>
+<p>如果你需要解决一个排序问题和没有系统排序函数可用，可以先用希尔排序，在考虑是否需要替换为更复杂的排序算法。</p>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight js"><figcaption><span>example.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">shell_sort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> len = arr.length;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> f = <span class="built_in">Math</span>.floor(len/<span class="number">2</span>); f &gt; <span class="number">0</span>; f = <span class="built_in">Math</span>.floor(f/<span class="number">2</span>)) &#123;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i = f; i &lt; len; i++) &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = i-f; j &gt;= <span class="number">0</span> &amp;&amp; arr[j] &gt; arr[f+j]; j -= f) &#123;</div><div class="line">            <span class="keyword">var</span> temp = arr[j];</div><div class="line">            arr[j] = arr[f+j];</div><div class="line">            arr[f+j] = temp;</div><div class="line">        &#125;;</div><div class="line">      &#125;;</div><div class="line">    &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>同样，我在上面的代码中加入几行 consloe 打印出在循环中各个参数的值和数组状态：</p>
+<p><img src="/images/排序算法之希尔排序/code-example.png" alt="添加console语句后的shell_sort()函数"></p>
+<p>我在函数中声明了一组有 5 个元素的数组，接下来看下图的打印结果，可以更好的理解希尔排序的交换过程：</p>
+<p><img src="/images/排序算法之希尔排序/example1.jpeg" alt="打印循环中的各个数组参数和结果"></p>
+<p>想弄懂希尔排序到底是怎么一步步交换元素的，我自己手动把数组带入执行了一遍函数。中间失败了好几次，- -因为循环嵌套是在太多了，导致我转着转着就蒙圈了。我觉得这个办法虽然笨，但是对于理解一个函数的运作是最直接不过的了。</p>
+<p>整体的交换过程为：<br><code>2 -&gt; 4  [2,7,4,9,0]</code><br><code>0 -&gt; 4  [2,7,0,9,4]</code><br><code>0 -&gt; 2  [0,7,2,9,4]</code><br>第一轮结束，增量为1<br><code>7 -&gt; 2  [0,2,7,9,4]</code><br><code>9 -&gt; 4  [0,2,7,4,9]</code><br><code>7 -&gt; 4  [0,2,4,7,9]</code><br>第二轮结束，增量为0</p>
+<p>这里我就不把带入过程写下来了，说一下希尔排序的大致思路吧：</p>
+<p>首先，从上面所写的交换过程很容易找出规律，结合希尔排序的规则来看，此时的增量为 <code>Math.floor(5/2)</code>（向下取整5／2 = 2），所以我们可以看作是从数组 0 下标开始隔一个取一个，也就是<code>[4,2,0]</code>。</p>
+<p>然后，把这三个元素按照大小互相交换位置，排序并不影响另外两个元素的位置，只在这三个元素的位置上互相交换，结果为<code>[0,7,2,9,4]</code>。</p>
+<p>最后，开始下一轮循环，此时增量为 <code>Math.floor(2/2)</code>（向下取整2／2 = 1）。这时增量为1，也就是数组元素挨个比较并排序，就跟用插入排序的排序规则是一样的了。</p>
+<p>也就是说，希尔排序会先把相隔增量的元素用插入排序的规则排好位置，然后再把相隔增量/2的元素用插入排序排好位置，这样直到增量为1，就把元素挨个用插入排序检查大小并排序。</p>
+<p>现在你应该可以理解，为什么希尔排序可以把位于数组末尾的最小值很快的移动到数组前面了，因为它比插入排序的检查和移动间隔大，当然执行速度也就越快。相当于我们传给插入排序一个相对有序的数组，当然运行更快了。</p>
+<h1 id="比较希尔排序和插入排序"><a href="#比较希尔排序和插入排序" class="headerlink" title="比较希尔排序和插入排序"></a>比较希尔排序和插入排序</h1><p>为了证实青出于蓝而胜于蓝的希尔排序，跟以前一样，我测试了一下两种算法的运行时间。分别对两种算法生成100位随机数数组，然后进行排序，看运行时间。（测试运行时间的代码可以到我的Github上找，地址我会写在参考文档中）</p>
+<p>结果：</p>
+<p><img src="/images/排序算法之希尔排序/arr100.png" alt="随机数0-100，数组长度100"></p>
+<p>看上图，我生成了 10000 组随机数组，可以看出，希尔排序的运行时间是比插入排序快的。这个测试只针对随机数组，有兴趣的可以尝试传入正序或倒序数组再进行测试，看看结果是否一样。</p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a href="http://www.ituring.com.cn/book/875" target="_blank" rel="external">图灵程序设计丛书–算法(第4版)</a></li>
+<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/shell_sort.js" target="_blank" rel="external">希尔排序·源代码</a></li>
+<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/test_s_i.js" target="_blank" rel="external">比较插入排序和希尔排序的运行时间·源代码</a></li>
+</ul>
 <hr>
 
         
@@ -292,7 +317,7 @@
         <! -- 添加版权信息 -->
         <div class="article-footer-copyright">
             <center>
-                <img src="/images/Soft-Cat/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
+                <img src="/images/排序算法之希尔排序/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
             </center>
             <center>本文由
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
@@ -300,10 +325,10 @@
             </center>
             <center>本文作者为
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
-                ，本文标题为《 <b><a href="/2016/11/02/Soft-Cat/" target="_blank" title="Soft-Cat">Soft-Cat</a></b> 》
+                ，本文标题为《 <b><a href="/2016/12/01/排序算法之希尔排序/" target="_blank" title="排序算法之希尔排序">排序算法之希尔排序</a></b> 》
             </center>
             <center>本文永久链接为：
-                <b><a href="/2016/11/02/Soft-Cat/" target="_blank" title="Soft-Cat">http://lemon23.me/2016/11/02/Soft-Cat/</a></b>
+                <b><a href="/2016/12/01/排序算法之希尔排序/" target="_blank" title="排序算法之希尔排序">http://lemon23.me/2016/12/01/排序算法之希尔排序/</a></b>
             </center>
         </div>
         <! -- 添加版权信息 -->
@@ -316,7 +341,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/02/Soft-Cat/" data-id="ciw61lv3j0001ui0eaju38g83" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/12/01/排序算法之希尔排序/" data-id="ciw61lv3t0005ui0edul5hhu3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -402,7 +427,7 @@
 
             
     
-        <a href="http://lemon23.me/2016/11/02/Soft-Cat/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2016/11/02/Soft-Cat/">评论</a>
+        <a href="http://lemon23.me/2016/12/01/排序算法之希尔排序/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2016/12/01/排序算法之希尔排序/">评论</a>
     
 
         </footer>
@@ -411,21 +436,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2016/11/25/排序算法之选择排序/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇:</strong>
-            <div class="article-nav-title">
-                
-                    排序算法之选择排序
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/10/26/Vue关于data数据的深度响应原理/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2016/11/28/排序算法之插入排序/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇:</strong>
             <div class="article-nav-title">
                 
-                    Vue关于data数据的深度响应原理
+                    排序算法之插入排序
                 
             </div>
         </a>
@@ -441,7 +457,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2016/11/02/Soft-Cat/" data-title="Soft-Cat" data-url="http://lemon23.me/2016/11/02/Soft-Cat/"></div>
+    <div class="ds-thread" data-thread-key="2016/12/01/排序算法之希尔排序/" data-title="排序算法之希尔排序" data-url="http://lemon23.me/2016/12/01/排序算法之希尔排序/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;

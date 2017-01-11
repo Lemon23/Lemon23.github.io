@@ -151,7 +151,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                6
+                7
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -187,6 +187,165 @@
 
             
             <section id="main">
+    <article id="post-排序算法之归并排序" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/01/06/排序算法之归并排序/">排序算法之归并排序</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/01/06/排序算法之归并排序/">
+            <time datetime="2017-01-06T02:45:01.000Z" itemprop="datePublished">2017-01-06</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/技术/">技术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/算法/">算法</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/初级算法/">初级算法</a>, <a class="tag-link" href="/tags/排序/">排序</a>
+    </div>
+
+                    </div>
+                
+
+                
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><p>归并排序（Merge-Sort），是使用了分治法的一个典型应用。将已有序的子数组合并，得到一个有序数列，即先递归地将它们分成两半分别排序，然后将结果合并起来。</p></p>
+            <p class="article-more-link">
+                <a href="/2017/01/06/排序算法之归并排序/#more">查看更多</a>
+            </p>
+        
+        </div>
+
+        
+
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://lemon23.me/2017/01/06/排序算法之归并排序/" data-id="cixsqh0dj0005dl0efflbhhaj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<style>
+    .article-share-links :nth-child(4),
+    .article-share-links :nth-child(5),
+    .article-share-links :nth-child(6) {
+        color: #999;
+    }
+
+    .article-share-links :nth-child(4):hover,
+    .article-share-links :nth-child(5):hover,
+    .article-share-links :nth-child(6):hover {
+        color: #fff;
+    }
+</style>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                            // 人人分享链接
+                            '<a href="http://widget.renren.com/dialog/share?url=' + encodedUrl + '" class="fa fa-renren article-share-renren" target="_blank" title="人人"></a>',
+                            // 新浪微博分享链接
+                            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="fa fa-weibo article-share-weibo" target="_blank" title="新浪微博"></a>',
+                            // 腾讯微博分享链接
+                            '<a href="http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url=' + encodedUrl + '" class="fa fa-tencent-weibo article-share-tencent-weibo" target="_blank" title="腾讯微博"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 28,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://lemon23.me/2017/01/06/排序算法之归并排序/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2017/01/06/排序算法之归并排序/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+
     <article id="post-排序算法之希尔排序" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -249,7 +408,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/12/01/排序算法之希尔排序/" data-id="ciw7k41ok0005a90evqckjkuy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/12/01/排序算法之希尔排序/" data-id="cixsqh0da0001dl0el2fp94jl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -408,7 +567,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="ciw7k41on0006a90e78dobr2t" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/28/排序算法之插入排序/" data-id="cixsqh0dp000adl0eanhbyfec" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -567,7 +726,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/25/排序算法之选择排序/" data-id="ciw7k41op000aa90evzls8cm6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/25/排序算法之选择排序/" data-id="cixsqh0do0009dl0e3gm6nw7r" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -736,7 +895,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/11/02/Soft-Cat/" data-id="ciw7k41ob0001a90ee6mqt5pt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/11/02/Soft-Cat/" data-id="cixsqh0d60000dl0e2qwx0s0o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -905,7 +1064,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/" data-id="ciw7k41oh0004a90e61jxpic4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/10/26/Vue关于data数据的深度响应原理/" data-id="cixsqh0dh0004dl0e2yhldesb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -1074,7 +1233,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2016/10/21/Hexo的过坑记/" data-id="ciw7k41o60000a90eg3q45b5x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2016/10/21/Hexo的过坑记/" data-id="cixsqh0dm0006dl0euw9p14cc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -1183,6 +1342,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/01/06/排序算法之归并排序/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/技术/算法/">算法</a></p>
+                            <p class="item-title"><a href="/2017/01/06/排序算法之归并排序/" class="title">排序算法之归并排序</a></p>
+                            <p class="item-date"><time datetime="2017-01-06T02:45:01.000Z" itemprop="datePublished">2017-01-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2016/12/01/排序算法之希尔排序/" class="thumbnail">
     
     
@@ -1256,25 +1434,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/26/Vue关于data数据的深度响应原理/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/Vue关于data数据的深度响应原理/img1.png)" alt="Vue关于data数据的深度响应原理" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a></p>
-                            <p class="item-title"><a href="/2016/10/26/Vue关于data数据的深度响应原理/" class="title">Vue关于data数据的深度响应原理</a></p>
-                            <p class="item-date"><time datetime="2016-10-26T03:48:25.000Z" itemprop="datePublished">2016-10-26</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1284,7 +1443,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/算法/">算法</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计/">设计</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计/网页构建/">网页构建</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/算法/">算法</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计/">设计</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/设计/网页构建/">网页构建</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -1293,7 +1452,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -1314,7 +1473,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2016 Lemon<br>
+            &copy; 2017 Lemon<br>
         </div>
     </div>
 </footer>

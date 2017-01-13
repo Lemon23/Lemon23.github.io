@@ -3,21 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>排序算法之归并排序 | Lemon&#39;s Blog</title>
+    <title>排序算法之堆排序 | Lemon&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="归并排序（Merge-Sort），是使用了分治法的一个典型应用。将已有序的子数组合并，得到一个有序数列，即先递归地将它们分成两半分别排序，然后将结果合并起来。">
+    <meta name="description" content="堆排序是集归并排序和插入排序有点的一种排序算法，它与插入排序一样具有空间原址性，并且与归并排序一样，堆排序的时间复杂度是 O(nlgn)。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="排序算法之归并排序">
-<meta property="og:url" content="http://lemon23.me/2017/01/06/排序算法之归并排序/index.html">
+<meta property="og:title" content="排序算法之堆排序">
+<meta property="og:url" content="http://lemon23.me/2017/01/12/排序算法之堆排序/index.html">
 <meta property="og:site_name" content="Lemon's Blog">
-<meta property="og:description" content="归并排序（Merge-Sort），是使用了分治法的一个典型应用。将已有序的子数组合并，得到一个有序数列，即先递归地将它们分成两半分别排序，然后将结果合并起来。">
-<meta property="og:image" content="http://lemon23.me/images/排序算法之归并排序/example1.jpeg">
-<meta property="og:image" content="http://lemon23.me/images/排序算法之归并排序/example2.png">
-<meta property="og:updated_time" content="2017-01-12T03:55:54.000Z">
+<meta property="og:description" content="堆排序是集归并排序和插入排序有点的一种排序算法，它与插入排序一样具有空间原址性，并且与归并排序一样，堆排序的时间复杂度是 O(nlgn)。">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example1.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example2.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example3-1.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example3-2.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example3-3.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example3-4.png">
+<meta property="og:image" content="http://lemon23.me/images/排序算法之堆排序/example3-5.png">
+<meta property="og:updated_time" content="2017-01-13T02:52:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="排序算法之归并排序">
-<meta name="twitter:description" content="归并排序（Merge-Sort），是使用了分治法的一个典型应用。将已有序的子数组合并，得到一个有序数列，即先递归地将它们分成两半分别排序，然后将结果合并起来。">
-<meta name="twitter:image" content="http://lemon23.me/images/排序算法之归并排序/example1.jpeg">
+<meta name="twitter:title" content="排序算法之堆排序">
+<meta name="twitter:description" content="堆排序是集归并排序和插入排序有点的一种排序算法，它与插入排序一样具有空间原址性，并且与归并排序一样，堆排序的时间复杂度是 O(nlgn)。">
+<meta name="twitter:image" content="http://lemon23.me/images/排序算法之堆排序/example1.png">
     
 
     
@@ -193,7 +198,7 @@
 
 
             
-            <section id="main"><article id="post-排序算法之归并排序" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-排序算法之堆排序" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
 
@@ -202,7 +207,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            排序算法之归并排序
+            排序算法之堆排序
         </h1>
     
 
@@ -211,8 +216,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/01/06/排序算法之归并排序/">
-            <time datetime="2017-01-06T02:45:01.000Z" itemprop="datePublished">2017-01-06</time>
+        <a href="/2017/01/12/排序算法之堆排序/">
+            <time datetime="2017-01-12T03:54:16.000Z" itemprop="datePublished">2017-01-12</time>
         </a>
     </div>
 
@@ -226,7 +231,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/归并/">归并</a>, <a class="tag-link" href="/tags/排序/">排序</a>, <a class="tag-link" href="/tags/排序算法/">排序算法</a>
+        <a class="tag-link" href="/tags/堆/">堆</a>, <a class="tag-link" href="/tags/排序/">排序</a>, <a class="tag-link" href="/tags/排序算法/">排序算法</a>
     </div>
 
                     </div>
@@ -242,7 +247,7 @@
                     </span>
                     <span class="head-plus">
                         <i class="fa fa-comments"></i>
-                        <span class="ds-thread-count" data-thread-key="2017/01/06/排序算法之归并排序/">
+                        <span class="ds-thread-count" data-thread-key="2017/01/12/排序算法之堆排序/">
                             <i class="fa fa-spinner fa-spin"></i>
                         </span>条评论
                     </span>
@@ -260,7 +265,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">文章目录</strong>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#归并排序"><span class="toc-number">1.</span> <span class="toc-text">归并排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.1.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.2.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.3.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#堆排序"><span class="toc-number">1.</span> <span class="toc-text">堆排序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#堆"><span class="toc-number">1.1.</span> <span class="toc-text">堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#规则"><span class="toc-number">1.2.</span> <span class="toc-text">规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#时间复杂度"><span class="toc-number">1.3.</span> <span class="toc-text">时间复杂度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优缺点"><span class="toc-number">1.4.</span> <span class="toc-text">优缺点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法实现"><span class="toc-number">2.</span> <span class="toc-text">算法实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#js代码"><span class="toc-number">2.1.</span> <span class="toc-text">js代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">3.</span> <span class="toc-text">参考文档</span></a></li></ol>
                 </div>
             <script>
                 $('#toc').click(function() {
@@ -268,30 +273,33 @@
                 });
             </script>
             
-            <p>归并排序（Merge-Sort），是使用了分治法的一个典型应用。将已有序的子数组合并，得到一个有序数列，即先递归地将它们分成两半分别排序，然后将结果合并起来。</p>
+            <p>堆排序是集归并排序和插入排序有点的一种排序算法，它与插入排序一样具有空间原址性，并且与归并排序一样，堆排序的时间复杂度是 O(nlgn)。</p>
 <a id="more"></a>
-<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>归并排序是分治法的一个典型应用，将问题分解成几个规模较小但类似于原问题的子问题，递归地求解这些子问题，然后在合并这些子问题的解来建立原问题的解。</p>
-<p>实现归并的一种最直接的方法是将两个要归并的有序数组，归并到第三个数组中。所以它需要额外的空间来实现归并。</p>
-<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>首先，申请空间，用来存放归并后的数组；<br>然后，设定两个指针，指向待归并数组的起始位置；<br>比较元素，选择较小的元素放入合并空间中，并将指针移到下一位置；<br>依次比较，直到指针超出数组末尾，把余下的所有元素归并到合并序列的末尾。</p>
-<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>归并排序对于任意长度为 N 的数组，排序所需时间和 NlogN成正比。<br>比较操作的次数介于 NlgN／2 和 NlgN-N+1。<br>赋值操作的次数是 2NlgN。<br>空间复杂度为 O(n)。</p>
+<h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><p>堆排序使用了一种称为”堆”的数据结构来进行排序。所以想学习堆排序，先要了解”堆”的概念。堆不仅仅应用在堆排序中，它还可以构造一种有效的优先队列。</p>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>堆，一个可以被看作一棵近似的完全二叉树的数组对象。树上的每个结点对应数组中的一个元素，元素从左向右填充。根结点为数组最大值时称为最大堆，根结点为最小值时称为最小堆。而不论是最大堆或最小堆，结点值都要满足堆的性质，也就是某个结点值总是不大于或不小于其父结点的值。</p>
+<p>树的根结点是数组下标 0 的元素，也就是 A[0] ，如果我给定一个结点下标 i，很容易的可以计算得出它的父结点和左右子结点的下标。也就是：</p>
+<p>Parent = i/2 （结果向下取整）<br>Left = 2i + 1<br>Right = 2i + 2</p>
+<h2 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h2><p>从无序的输入数组中构造一个最大堆；<br>对数组进行原址排序，维护最大堆的性质，最大值元素在根结点中；<br>已经构建好的最大堆，通过互换 A[0] 与 A[n] 的位置，从堆中去掉最大元素，使其在正确的位置；<br>此时重新维护最大堆的性质，并重复交换步骤，直到数组从小到大排列好。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>包含 n 个元素的堆的高度是 lgn，堆结构上的一些基本操作的运行时间至多与树的高度成正比，即时间复杂度为 O(lgn)。</p>
 <h2 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h2><ol>
-<li><p>归并排序的空间复杂度不是最优的，他需要额外空间来存放已排序序列。</p>
+<li><p>构建初始堆所需要的比较次数多，所以不适宜数据较少的排序</p>
 </li>
-<li><p>归并排序可以减少比较次数，剩余元素不进行比较也可将其数据排序。</p>
+<li><p>堆排序是原地排序，辅助空间为 O(1)</p>
 </li>
-<li><p>归并排序是一种渐进最优的基于比较排序的算法，也就是说，在最坏情况下的比较次数和任意基于比较的排序算法所需的最少比较次数都是 NlgN。</p>
+<li><p>堆排序是不稳定的排序，也就是相同元素排序后的前后顺序会改变</p>
 </li>
 </ol>
-<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight js"><figcaption><span>merge_sort.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">merge_sort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span>(arr.length == <span class="number">1</span>) &#123;</div><div class="line">	<span class="keyword">return</span> arr;</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> middle = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>),</div><div class="line">    left = arr.slice(<span class="number">0</span>, middle),</div><div class="line">    right = arr.slice(middle);</div><div class="line">  <span class="keyword">return</span> merge(merge_sort(left), merge_sort(right));</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">merge</span>(<span class="params">left, right</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> result = [];</div><div class="line">  <span class="keyword">while</span>(left.length &gt; <span class="number">0</span> &amp;&amp; right.length &gt; <span class="number">0</span>) &#123;</div><div class="line">    <span class="keyword">if</span>(left[<span class="number">0</span>] &lt; right[<span class="number">0</span>]) &#123;</div><div class="line">        result.push(left.shift());</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        result.push(right.shift());</div><div class="line">    &#125;;</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> result.concat(left).concat(right);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我们来看一下打印日志后的交换过程：<br><img src="/images/排序算法之归并排序/example1.jpeg" alt="打印循环中的各个数组状态"></p>
-<p>其实归并排序很好理解，运用分治思想，把一个数组先分成左右两个数组，再把左右两个数组分别再拆分成两个数组，直到左右两个数组只有一个元素。然后逐步依次比较归并，最后归并成一个完整的有序数组。</p>
-<p>看下图更详细的展示归并排序的操作：<br><img src="/images/排序算法之归并排序/example2.png" alt="归并排序在数组 arr=[5,2,4,7,1,3,2,6] 上的操作"></p>
-<p>有一个很好的比喻来描述归并排序，就是假如桌子上放着两摞倒扣的扑克牌，这两摞扑克牌都是已经依序从上到下排列好的，那你要如何才能将两摞扑克牌合成有序的一副扑克牌呢？条件是每次只能拿起任意一摞扑克牌的最上面的一张。</p>
-<p>很简单，我们把两摞扑克牌分别命名为 A 和 B，这样方便讲解。分别翻开两摞拍的第一张 A1 和 B1，比较两个的大小，如果 A1 &lt; B1 则把 A1 倒扣放到一边。接下来拿起 A2 与 B1 做比较，如果 A2 &gt; B1 则把 B1 倒扣放到刚才放到一边的 A1 上面。重复这个过程，直到 A 或 B 任意一摞拿空，把剩下的拍依次倒扣放到已排好的那摞扑克牌上面。这样我们就把两摞扑克牌有序的合并为一摞了。</p>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><h2 id="js代码"><a href="#js代码" class="headerlink" title="js代码"></a>js代码</h2><figure class="highlight js"><figcaption><span>heap_sort.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.buildMaxHeap = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i =  <span class="built_in">Math</span>.floor(<span class="keyword">this</span>.length/<span class="number">2</span>)<span class="number">-1</span>; i &gt;=<span class="number">0</span>; i--) &#123;</div><div class="line">    <span class="keyword">this</span>.maxHeapify(i, <span class="keyword">this</span>.length);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.prototype.exchange = <span class="function"><span class="keyword">function</span> (<span class="params">i, j</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> tmp = <span class="keyword">this</span>[i];</div><div class="line">  <span class="keyword">this</span>[i] = <span class="keyword">this</span>[j];</div><div class="line">  <span class="keyword">this</span>[j] = tmp;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.prototype.heapSort = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.buildMaxHeap();</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="keyword">this</span>.length<span class="number">-1</span>; i &gt; <span class="number">0</span>; i--) &#123;</div><div class="line">    <span class="keyword">this</span>.exchange(<span class="number">0</span>, i);</div><div class="line">    <span class="keyword">this</span>.maxHeapify(<span class="number">0</span>, i);</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.prototype.maxHeapify = <span class="function"><span class="keyword">function</span> (<span class="params">i, j</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> largest = i;</div><div class="line">  <span class="keyword">var</span> left = <span class="number">2</span> * i + <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> right = <span class="number">2</span> * i + <span class="number">2</span>;</div><div class="line">  <span class="keyword">if</span>(left &lt; j &amp;&amp; <span class="keyword">this</span>[largest] &lt; <span class="keyword">this</span>[left]) &#123;</div><div class="line">    largest = left;</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">if</span>(right &lt; j &amp;&amp; <span class="keyword">this</span>[largest] &lt; <span class="keyword">this</span>[right]) &#123;</div><div class="line">    largest = right;</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">if</span>(largest != i) &#123;</div><div class="line">    <span class="keyword">this</span>.exchange(i, largest);</div><div class="line">    <span class="keyword">this</span>.maxHeapify(largest, j);</div><div class="line">  &#125;;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我来分析一下堆排序的操作过程，看图：</p>
+<p><img src="/images/排序算法之堆排序/example1.png" alt="打印数组状态"></p>
+<p>堆排序首先要对数组构建初始”堆”，形态为 a 。接着从底层开始向上，维护最大堆的性质，如 b ，父结点 2 小于左子结点 3，所以交换两个结点位置。重复此步骤直至堆结构符合最大堆性质，形如 c。<br>此时数组状态为：[8, 3, 6, 2, 0, 5]</p>
+<p><img src="/images/排序算法之堆排序/example2.png" alt="构建最大堆"></p>
+<p>然后开始进行堆排序，堆的根结点也就是数组中的最大元素，为了符合排序后的大小顺序，我们每次都把根结点与数组末尾元素进行互换，并重新进行维护最大堆性质。</p>
+<p><img src="/images/排序算法之堆排序/example3-1.png" alt=""><br><img src="/images/排序算法之堆排序/example3-2.png" alt=""><br><img src="/images/排序算法之堆排序/example3-3.png" alt=""><br><img src="/images/排序算法之堆排序/example3-4.png" alt=""><br><img src="/images/排序算法之堆排序/example3-5.png" alt=""></p>
+<p>无非是把最大堆转换成最小堆的过程。</p>
 <h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
-<li><a href="http://www.ituring.com.cn/book/875" target="_blank" rel="external">图灵程序设计丛书–算法(第4版)</a></li>
 <li><a href="http://www.cmpedu.com/book/book!webDetails.do?book_id=2052482" target="_blank" rel="external">算法导论(原书第三版)</a></li>
-<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/merge_sort.js" target="_blank" rel="external">归并排序·源代码</a></li>
+<li><a href="https://github.com/Lemon23/Algorithms-Lib/blob/master/Sort%20Algorithm/heap_sort.js" target="_blank" rel="external">堆排序·源代码</a></li>
 </ul>
 <hr>
 
@@ -302,7 +310,7 @@
         <! -- 添加版权信息 -->
         <div class="article-footer-copyright">
             <center>
-                <img src="/images/排序算法之归并排序/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
+                <img src="/images/排序算法之堆排序/share_weixin.png" alt="" style="width: 90px; height: 90px;" />
             </center>
             <center>本文由
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
@@ -310,10 +318,10 @@
             </center>
             <center>本文作者为
                 <b><a href="/index.html" target="_blank" title="Lemon">Lemon</a></b>
-                ，本文标题为《 <b><a href="/2017/01/06/排序算法之归并排序/" target="_blank" title="排序算法之归并排序">排序算法之归并排序</a></b> 》
+                ，本文标题为《 <b><a href="/2017/01/12/排序算法之堆排序/" target="_blank" title="排序算法之堆排序">排序算法之堆排序</a></b> 》
             </center>
             <center>本文永久链接为：
-                <b><a href="/2017/01/06/排序算法之归并排序/" target="_blank" title="排序算法之归并排序">http://lemon23.me/2017/01/06/排序算法之归并排序/</a></b>
+                <b><a href="/2017/01/12/排序算法之堆排序/" target="_blank" title="排序算法之堆排序">http://lemon23.me/2017/01/12/排序算法之堆排序/</a></b>
             </center>
         </div>
         <! -- 添加版权信息 -->
@@ -326,7 +334,7 @@
 
 </div>
 
-    <a data-url="http://lemon23.me/2017/01/06/排序算法之归并排序/" data-id="cixu1iknk000b3k0e8i5rb8ju" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.me/2017/01/12/排序算法之堆排序/" data-id="cixu1ikn000003k0ew9tjby2k" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -412,7 +420,7 @@
 
             
     
-        <a href="http://lemon23.me/2017/01/06/排序算法之归并排序/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2017/01/06/排序算法之归并排序/">评论</a>
+        <a href="http://lemon23.me/2017/01/12/排序算法之堆排序/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://lemon23.me/2017/01/12/排序算法之堆排序/">评论</a>
     
 
         </footer>
@@ -421,21 +429,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/01/12/排序算法之堆排序/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇:</strong>
-            <div class="article-nav-title">
-                
-                    排序算法之堆排序
-                
-            </div>
-        </a>
     
-    
-        <a href="/2016/12/01/排序算法之希尔排序/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/01/06/排序算法之归并排序/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇:</strong>
             <div class="article-nav-title">
                 
-                    排序算法之希尔排序
+                    排序算法之归并排序
                 
             </div>
         </a>
@@ -451,7 +450,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2017/01/06/排序算法之归并排序/" data-title="排序算法之归并排序" data-url="http://lemon23.me/2017/01/06/排序算法之归并排序/"></div>
+    <div class="ds-thread" data-thread-key="2017/01/12/排序算法之堆排序/" data-title="排序算法之堆排序" data-url="http://lemon23.me/2017/01/12/排序算法之堆排序/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;

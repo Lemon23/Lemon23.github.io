@@ -38,7 +38,10 @@ h3{
 	width: 0;
 	margin: 3px auto;
 	padding: 5px 0;
-	border-top: 2px solid #f00;
+	border-top: 2px solid #ff0000a1;
+    overflow: hidden;
+    text-overflow: hidden;
+    white-space: nowrap;
 }
 .title_en h2 {
 	display: none;
@@ -64,7 +67,6 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	opacity: 0;	
 }
 #header {
 	position: fixed;
@@ -73,10 +75,6 @@ header {
 	left: 0;
 	height: 76px;
 	z-index: 1;
-	background: #999;
-	box-shadow: 0 0 10px #ccc;
-	-webkit-transition: all 5s ease;
-	transition: all 5s ease;
 }
 #site_logo {
 	margin-top: 10px;
@@ -120,25 +118,31 @@ aside a {
 	position: relative;
 	display: block;
 	margin: 10px 0;
-	width: 20px;
-	height: 20px;
+	width: 22px;
+	height: 22px;
 	background: url(../images/aside_1.png) no-repeat center center;
 	border-radius: 50%;
 }
 aside a.selected {
-	background: url(../images/aside_2.png) no-repeat center center;
+	background: url(../images/timg.png) no-repeat center center;
+	background-size: 40px 35px;
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); 	/* IE 9 */
+	-moz-transform:rotate(7deg); 	/* Firefox */
+	-webkit-transform:rotate(7deg); /* Safari 和 Chrome */
+	-o-transform:rotate(7deg);
 }
 aside b {
-	color: #FF88C2;
+	color: #b57348;
 	position: absolute;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: normal;
 	top: 0;
 	line-height: 20px;
 	display: none;
 	right: 100%;
 	width: 100px;
-	padding-right: 5px;
+	padding-right: 7px;
 	text-align: right;
 }
 /* common style of page */
@@ -151,7 +155,7 @@ aside b {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	background: url(../images/bg.jpg) no-repeat center top;
+	background: url(../images/bg.jpeg) no-repeat center top;
 	background-size: 100% 100%;
 }
 #home_content,
@@ -206,14 +210,14 @@ aside b {
 #home_head img {
 	width: 150px;
 	height: 150px;
-	border: 2px solid #fbd;
+	border: 2px solid #f7b9a4;
 	border-radius: 50%;
 	position: absolute;
 	-webkit-transition: box-shadow 2s;
 	transition: box-shadow 2s;
 }
 #home_head img:hover {
-	box-shadow: 0px 0px 20px #87CEFA;
+	box-shadow: 0px 0px 25px #f7b9a4;
 }
 #home_info_box {
 	border-top: 2px solid #cdf;
@@ -244,25 +248,24 @@ aside b {
 	height: 510px;
 }
 #about_list_content {
-	margin: 50px auto;
+	margin: 30px auto 50px auto;
 	width: 800px;
-	height: 150px;
-	padding: 20px 0;
-	border-radius: 25px;
-	background: #D8BFD8;
-	opacity: 0.5;	
+	padding: 10px 0;
+	opacity: 0.65;
+	text-align: center;
 }
 .about_list {
-	margin: 0 150px;
+	margin: 0 80px;
 }
 .about_list p {
-	color: #74F;
-	font-size: 15px;
+	color: #ef5d02;
+	font-size: 16px;
+	margin-bottom: 8px;
 }
 #about_info {
-	color: #888;
 	clear: both;
 	margin: 50% auto;
+	padding-top: 15px;
 	height: 160px;
 	width: 0;
 	position: relative;
@@ -289,8 +292,10 @@ aside b {
 	border-bottom: 2px solid #59f;
 }
 #about_info p {
+	color: rgba(6, 50, 117, 0.65);
 	text-align: center;
-	line-height: 40px;
+	font-weight: 500;
+	line-height: 2;
 	position: relative;
 	bottom: -300px;
 }
@@ -454,7 +459,7 @@ aside b {
 	z-index: 2;
 	width: 200px;
 	height: 150px;
-	margin: 25px;
+	margin: 0 25px;
 	float: left;
 	position: relative;
 	outline: 2px solid #efefef;  
@@ -473,26 +478,26 @@ aside b {
 	background: rgba(230,230,250, 0.4);
 }
 .demo_box_title {
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 	position: relative;
-	margin: 10px auto 0;
+	margin: 40px auto 0;
 }
 .demo_box_title span:nth-child(1) {
 	color: #f00;
-	margin-right: 110px;
+	margin-left: 90px;
 }
 .demo_box_title span:nth-child(2) {
 	color: #3cf;
-	margin-right: 120px
+	margin-left: 170px
 }
 .demo_box_title span:nth-child(3) {
 	color: #6c0;
-	margin-right: 130px
+	margin-left: 180px
 }
 .demo_box_title span:nth-child(4) {
 	color:#f63;
-	margin-right: 40px;
+	margin-left: 155px;
 }
 .demo_detail {
 	height: 230px;
@@ -503,15 +508,16 @@ aside b {
 	position: absolute;
 	width: 320px;
 	left: -60px;
+	top: -40px;
 	font-size: 14px;
 	line-height: 18px;
 	display: none;
 	border-radius: 10px;
-	padding: 15px;
-	opacity: 0.4;
+	padding: 5px 10px 5px 25px;
+	opacity: 0.5;
 }
 #demo_detail_int1 {
-	background: #F88;
+	background: #ff9799;
 }
 #demo_detail_int2 {
 	background: #7DF;
@@ -526,14 +532,16 @@ aside b {
 	left: 720px;
 }
 .demo_detail_int li {
+    color: #000;
+    margin: 5px 0;
 	font-size: 13px;
 	list-style-type: square;
 }
 #demo_info {
 	clear: both;
-	padding-top: 20px;
-	border-top: 2px solid #cdf;
-	width: 950px;
+	padding-top: 10px;
+	border-top: 1px solid #cdf;
+	width: 1000px;
   	margin: 0 auto;
 }
 #demo_info p {
@@ -543,11 +551,11 @@ aside b {
 	line-height: 20px;
 }
 #demo_info p a {
-	color: #f8c;
+	color: #b47e4e;
 	font-weight: 900;
 }
 #demo_info p a:hover {
-	color: #f00;
+	color: #8f777e;
 }
 .demo_scale {
 	visibility: hidden;
@@ -614,21 +622,20 @@ aside b {
 .contact_message {
 	float: left;
 	margin: 40px 450px;
-	width: 90px;
-	height: 90px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
-	background: #FFB6C1;
+	background: #f5d45e;
 	color: #fff;
 	text-align: center;
-	line-height: 90px;
-	opacity: 0.5;
+	line-height: 100px;
 }
 #contact_message1 {
 	cursor: pointer;
 	transition: all 0.2s ease-in-out;
 }
 #contact_message1:hover {
-	box-shadow: 0 0 20px #87CEFA;
+	box-shadow: 0 0 20px rgb(253, 208, 134);
 }
 #contact_message2 {
 	display: none;
@@ -638,18 +645,18 @@ footer {
 	bottom: 0;
 	padding-top: 10px;
 	width: 100%;
-	border: #ccc 2px solid;
+	border-top: 1px solid #cdf;
 }
 .footer {
 	line-height: 24px;
-	font-size: 8px;
+	font-size: 10px;
 	text-align: center;
-	color: #666;
+	color: #8e7878;
 }
 footer div a {
 	display: inline-block;
 	margin: 0 5px;
-	font-size: 8px;
+	font-size: 10px;
 	color: #666;
 }
 footer div a:hover {

@@ -8,15 +8,15 @@
     <meta name="description" content="博客终于搭好了，就写一篇文章就来记录一下我是如何配置Hexo直到部署上线的。顺便写给我家的小胖子，留着以后过坑用，拿走不谢哟～ ^ ^">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo的过坑记">
-<meta property="og:url" content="http://Lemon23.github.io/2016/10/21/Hexo的过坑记/index.html">
+<meta property="og:url" content="http://lemon23.github.io/2016/10/21/Hexo的过坑记/index.html">
 <meta property="og:site_name" content="Lemon's Blog">
 <meta property="og:description" content="博客终于搭好了，就写一篇文章就来记录一下我是如何配置Hexo直到部署上线的。顺便写给我家的小胖子，留着以后过坑用，拿走不谢哟～ ^ ^">
-<meta property="og:image" content="http://Lemon23.github.io/images/Hexo的过坑记/img1.jpeg">
+<meta property="og:image" content="http://lemon23.github.io/images/Hexo的过坑记/img1.jpeg">
 <meta property="og:updated_time" content="2016-11-21T08:51:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的过坑记">
 <meta name="twitter:description" content="博客终于搭好了，就写一篇文章就来记录一下我是如何配置Hexo直到部署上线的。顺便写给我家的小胖子，留着以后过坑用，拿走不谢哟～ ^ ^">
-<meta name="twitter:image" content="http://Lemon23.github.io/images/Hexo的过坑记/img1.jpeg">
+<meta name="twitter:image" content="http://lemon23.github.io/images/Hexo的过坑记/img1.jpeg">
     
 
     
@@ -165,10 +165,8 @@
                 <span>标签</span>
             </div>
             <div class="article-info-block">
-                <span id="busuanzi_container_site_uv">
-                    <i id="busuanzi_value_site_uv"></i>
-                    <span>访客</span>
-                </span>
+                <p id="busuanzi_value_site_uv"></p>
+                <span>访客</span>
 
             </div>
         </div>
@@ -437,7 +435,7 @@
                 ，本文标题为《 <b><a href="/2016/10/21/Hexo的过坑记/" target="_blank" title="Hexo的过坑记">Hexo的过坑记</a></b> 》
             </center>
             <center>本文永久链接为：
-                <b><a href="/2016/10/21/Hexo的过坑记/" target="_blank" title="Hexo的过坑记">http://Lemon23.github.io/2016/10/21/Hexo的过坑记/</a></b>
+                <b><a href="/2016/10/21/Hexo的过坑记/" target="_blank" title="Hexo的过坑记">http://lemon23.github.io/2016/10/21/Hexo的过坑记/</a></b>
             </center>
         </div>
         <! -- 添加版权信息 -->
@@ -450,7 +448,7 @@
 
 </div>
 
-    <a data-url="http://Lemon23.github.io/2016/10/21/Hexo的过坑记/" data-id="cjjsdr50z00288n0ehput4u8o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://lemon23.github.io/2016/10/21/Hexo的过坑记/" data-id="cjjsdr50z00288n0ehput4u8o" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <style>
     .article-share-links :nth-child(4),
     .article-share-links :nth-child(5),
@@ -534,11 +532,6 @@
     })(jQuery);
 </script>
 
-            
-    
-        <a href="http://Lemon23.github.io/2016/10/21/Hexo的过坑记/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://Lemon23.github.io/2016/10/21/Hexo的过坑记/">评论</a>
-    
-
         </footer>
     </div>
     
@@ -567,56 +560,20 @@
 </nav>
 
 
+        <div id="vcomments" classs="article-footer-comment" style="background-color: white"></div>
     
 </article>
 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
-    
-    <section id="comments">
-    
-        
-    <div class="ds-thread" data-thread-key="2016/10/21/Hexo的过坑记/" data-title="Hexo的过坑记" data-url="http://Lemon23.github.io/2016/10/21/Hexo的过坑记/"></div>
-    <style>
-        #ds-thread #ds-reset .ds-textarea-wrapper {
-            background: none;
-        }
-        #ds-reset .ds-avatar img {
-            box-shadow: none;
-        }
-        #ds-reset .ds-gradient-bg {
-            background: #f7f7f7;
-        }
-        #ds-thread #ds-reset li.ds-tab a {
-            border-radius: 3px;
-        }
-        #ds-thread #ds-reset .ds-post-button {
-            color: white;
-            border: none;
-            box-shadow: none;
-            background: #d32;
-            text-shadow: none;
-            font-weight: normal;
-            font-family: 'Microsoft Yahei';
-        }
-        #ds-thread #ds-reset .ds-post-button:hover {
-            color: white;
-            background: #DE594C;
-        }
-        #ds-thread #ds-reset .ds-post-button:active {
-            background: #d32;
-        }
-        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
-            color: white;
-            background: #d32;
-            box-shadow: none;
-            text-shadow: none;
-            font-weight: normal;
-        }
-    </style>
-
-    
-    </section>
-
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: 'V6sfmW7mpeTl0t59eeacwOC4-gzGzoHsz',
+    appKey: 'oXdXhdi8vDoTay9OhXN55cGu'
+  })
+</script>
 
 
 </section>
@@ -787,20 +744,6 @@
 
 
         
-    
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:'lemon23'};
-    (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-
-
 
     
         <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
